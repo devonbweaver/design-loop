@@ -41,13 +41,13 @@ that first if you want to know what using this actually feels like.
 **Clone straight into your skills directory:**
 
 ```bash
-git clone https://github.com/USER/design-loop ~/.claude/skills/design-loop
+git clone https://github.com/devonbweaver/design-loop ~/.claude/skills/design-loop
 ```
 
 **Or clone anywhere and symlink** (keeps `git pull` easy):
 
 ```bash
-git clone https://github.com/USER/design-loop
+git clone https://github.com/devonbweaver/design-loop
 ./design-loop/install.sh
 ```
 
