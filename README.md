@@ -36,6 +36,30 @@ to a reusable building block only after clean repeat runs and a human spot-check
 against Linear — from frozen bar through two critic-caught defects to a pass. Read
 that first if you want to know what using this actually feels like.
 
+## What it produces
+
+Three landing pages, three invented products, one basic prompt each ("make a beautiful
+site for a made-up product"). **Left is the first pass, before the loop. Right is after
+the critic panel refused it — as many rounds as it took — until an independent, harsh eye
+called it genuinely great.** Same prompt every time; the only variable is the loop.
+
+**Borealis** — an aurora forecast. The first-pass aurora was a faint, structureless smear;
+the panel refused it four times (twice "genuinely great, but doesn't beat the bar") before
+the hero became real drifting curtains and a ribbon of aurora light threaded the whole page.
+
+![Borealis, before and after the loop](showcases/borealis-before-after.png)
+
+**Volta** — a modular synthesizer in a browser. Four rounds took it from a generic
+dark-SaaS hero to a committed instrument: an editorial serif headline, brushed-metal
+modules, and a live signal threading every section.
+
+![Volta, before and after the loop](showcases/volta-before-after.png)
+
+**Meridian** — custom star maps. Already strong on the first pass, so the loop's catches
+were subtler — here, the night-sky atmosphere failing to carry past the hero.
+
+![Meridian, before and after the loop](showcases/meridian-before-after.png)
+
 ## Install (Claude Code)
 
 **Clone straight into your skills directory:**
