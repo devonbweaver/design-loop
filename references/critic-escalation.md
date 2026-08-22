@@ -9,10 +9,10 @@ shared primitives earn the full gauntlet.
 
 | Tier | Example | Required checks |
 |---|---|---|
-| 0 — copy/style tweak | text change, token swap, spacing <8px | mechanical checks + one screenshot diff |
-| 1 — local component | button, filter control, table-row state | task test + System critic + static screenshot |
-| 2 — flow / new visual pattern | detail sheet, command menu, empty state, status flow | task gate + Brief/System/Craft + visual artifacts |
-| 3 — signature interaction | agent-run sheet, onboarding, agent creation, drag/reorder | all mechanical gates + all four critics + normal/reduced-motion video + refutation pass |
+| 0 — copy/style tweak | text change, token swap, spacing <8px | visual-defect check + one screenshot diff |
+| 1 — local component | button, filter control, table-row state | visual-defect check + System critic + static screenshot |
+| 2 — flow / new visual pattern | detail sheet, command menu, empty state, status flow | visual-defect gate + Craft/System + visual artifacts |
+| 3 — signature interaction | agent-run sheet, onboarding, agent creation, drag/reorder | visual-defect gate + Craft/System/Motion + normal/reduced-motion video + refutation pass |
 | 4 — shared primitive / registry promotion | Dialog, command menu, data table, focus trap, motion recipe | Tier 3 + repeated clean runs + human review |
 
 A simple padding adjustment must not buy a Tier-3 panel; a shared foundation
@@ -20,7 +20,7 @@ must not slip through on Tier-1 scrutiny.
 
 ## Cost controls
 
-- **Cheap gates first.** If the task runner, a11y, console, or token checks
+- **Cheap gates first.** If the visual-defect gate (overflow, responsive, contrast, focus) checks
   fail, return the failure — never call a model critic on a build a check
   already rejected (this is the skill's governing rule 1, applied to spend).
 - **Escalate only on material diffs.** A new state, interaction path, overlay,

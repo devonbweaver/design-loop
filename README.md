@@ -88,16 +88,19 @@ agent at all.
 - A **specific** reference — one page/screen that does the thing brilliantly. A
   vague bar ("good SaaS design") is the #1 reason the method fails.
 - The ability to render your output and, for interaction work, to record it.
-- Optional: Playwright for the deterministic task-success gate and interaction capture.
+- Optional: Playwright for the visual-defect + conformance gate and interaction capture.
 
 ## What's inside
 
 ```
-SKILL.md                         # the loop: 11 phases, two governing rules
+SKILL.md                         # the loop: 8 phases, two governing rules
 EXAMPLE.md                       # a full condensed run, start to pass
 references/
   freeze-and-versioning.md       # freeze the bar; immutable house vs derived bar; provenance
-  mechanical-gate.md             # deterministic task-runner + token/a11y/regression gate
+  reference-and-brief.md         # set a bar the critic can enforce: region-vs-point, binding brief
+  craft-standards.md             # what makes UI genuinely beautiful: the taste the Craft critic holds
+  visual-defect-gate.md          # the floor: visual brokenness only (overflow, contrast, jank), not the goal
+  inventory.md                   # the real DESIGN.md / component catalog to shop from before generating
   critic-escalation.md           # match verdict cost to change risk (tiers 0–4) + cost controls
   motion-bar.md                  # motion token baseline + binary motion rules
   interaction-loop.md            # recorded-interaction evidence + scenario matrix

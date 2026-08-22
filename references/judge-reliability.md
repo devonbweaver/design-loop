@@ -44,9 +44,9 @@ EVIDENCE: [timestamp / frame id]
 REPAIR: [smallest testable implementation change]
 ```
 
-Voting: **unanimous** pass from all four judges on signature interactions. For
-lower-value interactions, allow 3/4 ONLY if the Motion critic passes — motion
-must not be outvoted by three static judges.
+Voting: **unanimous** pass from the panel (Craft, System, and Motion when
+interactive) on signature work. Craft is never outvoted — a **Craft fail is a hard
+fail even if the others pass.** Beauty is the point; it does not get majority-ruled away.
 
 ## Panel-reliability controls
 
@@ -64,6 +64,29 @@ must not be outvoted by three static judges.
 
 Do NOT give all critics identical prompts or identical vision models — different
 lenses only help if genuinely differentiated by evidence + rubric.
+
+## Anti-rubber-stamp rules (what stops a "harsh" critic decaying into confident vibes)
+
+The default failure of this whole genre is a critic that *sounds* harsh but rubber-stamps. These
+five rules, drawn from shipped design agents (sources in `inventory.md`), are what keep it honest:
+
+- **Look at pixels, or say you didn't.** A critic judges a real render (screenshot / video). If it
+  only read code, its verdict MUST be stamped `[CODE-ONLY — visual issues not assessed]` — a
+  code-only pass is never a real pass. (educlopez/ui-craft, Step 0.)
+- **The builder does not grade its own work.** Verification is a separate agent with its own
+  browser, and it is **silent on pass** — it speaks only to report a defect. This is independence
+  *and* a context-budget decision: self-review clutters the builder and inflates its confidence.
+  (Anthropic's own design agent.)
+- **Cite exact values; never approximate.** When a verdict names a measured value (a gap, a
+  duration, a hex, a ratio), copy it exactly from the evidence — an approximated number is how a
+  critique becomes an unfalsifiable vibe. (emilkowalski/skills, AUDIT.md.)
+- **Problems over prescriptions.** State the problem and its impact, not the fix ("the section
+  headings all read at one volume, so nothing anchors the page" — not "set it to 50px"). The
+  builder owns the repair; a critic that prescribes pixels stops seeing the actual defect.
+  (OneRedOak/claude-code-workflows.)
+- **Severity, always.** Every finding carries a triage label — **[Blocker] / [High-Priority] /
+  [Medium] / [Nitpick]** — so a "genuinely great" verdict can't hide an unranked pile of nitpicks,
+  and a Blocker can't be lost among them.
 
 ## What to absorb or beat (competitive landscape)
 
@@ -90,7 +113,7 @@ Retrieval: private registry → shadcn registries → external galleries
    ↓
 Builder: adapt pattern to house system · write/update Playwright tests · normal + reduced-motion artifacts
    ↓
-Critics: Brief (task) · System (tokens/a11y) · Craft (screenshot/reference) · Motion (video/filmstrip)
+Critics: Craft (beauty vs reference — the star, harsh) · System (hierarchy/coherence) · Motion (interaction/filmstrip)
    ↓
 One-gap repair
    ↓

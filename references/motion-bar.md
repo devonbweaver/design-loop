@@ -61,6 +61,14 @@ constraints (purposeful, brief, cancellable, optional).
 - Motion is never REQUIRED to understand success, error, selection, or navigation.
 - `prefers-reduced-motion` is tested and preserves functional feedback.
 
+## Character + ceiling (from Google `design.md` PHILOSOPHY.md)
+
+- **Hard ceiling: nothing in the UI animates longer than ~300ms. If it needs longer, cut it.**
+  Speed reads as quality; a slow "premium" transition reads as sluggish.
+- **Pick one character and hold it** — e.g. "like a light switch, not a door closing." One shared
+  easing family carries that character across the whole surface; mixed easings read as assembled.
+- Reduced motion collapses durations to **0ms** (an instant state change), not to a slower fallback.
+
 ## Hard vetoes (auto-FAIL, from Apple HIG)
 
 - Decorative motion that delays work.
